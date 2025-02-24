@@ -12,6 +12,7 @@
     // リダイレクト先が指定されている場合は遷移
     if (redirectUrl) {
       window.location.href = redirectUrl;
+      window.close();
     } else {
       document.write('<h1>リダイレクト先が指定されていません。</h1>');
     }
