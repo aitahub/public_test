@@ -1,1 +1,26 @@
-<script>alert()</script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // URLパラメータからリダイレクト先を取得
+    const params = new URLSearchParams(window.location.search);
+    const redirectUrl = params.get('url');
+
+    // リダイレクト先が指定されている場合は遷移
+    if (redirectUrl) {
+      window.location.href = redirectUrl;
+    } else {
+      document.write('<h1>リダイレクト先が指定されていません。</h1>');
+    }
+  </script>
+</head>
+<body>
+  <!-- JavaScriptが無効な場合のフォールバック -->
+  <noscript>
+    <h1>JavaScriptを有効にしてください。</h1>
+  </noscript>
+</body>
+</html>
