@@ -7,7 +7,7 @@
   <script>
     // URLパラメータからリダイレクト先を取得
     const params = new URLSearchParams(window.location.search);
-    const redirectUrl = params.get('url');
+    const redirectUrl = 'obsidian://open?file='+encodeURIComponent(params.get('title'));
 
     // リダイレクト先が指定されている場合は遷移
     if (redirectUrl) {
